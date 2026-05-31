@@ -130,8 +130,7 @@ class DriverListView(LoginRequiredMixin, generic.ListView):
         username = self.request.GET.get("username", "")
 
         context["search_form"] = DriverUsernameSearchForm(
-            initial={"username": username}
-        )
+            initial={"username": username})
         return context
 
     def get_queryset(self):
